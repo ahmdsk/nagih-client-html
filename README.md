@@ -1,3 +1,5 @@
+![Tampilan Pengingat Pembayaran](./Screenshot%202025-05-15%20at%2009.23.54.png)
+
 # 💰 Client Payment Reminder Page
 Halaman HTML sederhana dan estetis untuk mengingatkan klien mengenai tagihan yang belum dibayar. Dibuat menggunakan Tailwind CSS dan dikustomisasi dengan JavaScript.
 
