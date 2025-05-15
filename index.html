@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengingat Pembayaran</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed tracking-wide flex justify-center items-center min-h-screen">
+
+  <div id="invoiceContainer" class="w-full"></div>
+
+  <script>
+    const namaKlien = "Nama Client";
+    const namaProyek = "[Web SPP]";
+    const jumlahTagihan = "Rp [1.500.000]";
+    const jatuhTempo = "15 Mei 2025";
+    const noWhatsapp = "+62 812-3456-7890";
+    const waLink = "https://wa.me/6281234567890";
+
+    document.getElementById("invoiceContainer").innerHTML = `
+      <div class="bg-white shadow-2xl rounded-2xl max-w-xl w-full p-8 mx-auto">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4 text-center">📩 Pengingat Pembayaran</h1>
+        
+        <p class="text-gray-700 mb-4">
+          Kepada Yth. <span class="font-semibold">${namaKlien}</span>,
+        </p>
+        
+        <p class="text-gray-700 mb-4">
+          Kami ingin mengingatkan bahwa terdapat tagihan yang belum dibayarkan terkait dengan proyek/jasa yang telah kami selesaikan. Berikut detailnya:
+        </p>
+
+        <div class="bg-gray-100 rounded-lg p-4 text-sm text-gray-800 mb-6">
+          <p><strong>Nama Proyek:</strong> ${namaProyek}</p>
+          <p><strong>Jumlah Tagihan:</strong> ${jumlahTagihan}</p>
+          <p><strong>Jatuh Tempo:</strong> ${jatuhTempo}</p>
+        </div>
+
+        <p class="text-gray-700 mb-4">
+          Kami menghargai kerja sama Anda dan berharap pembayaran dapat segera diselesaikan agar hubungan profesional kita tetap berjalan dengan baik.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          Jika sudah melakukan pembayaran, mohon abaikan pesan ini. Apabila ada pertanyaan atau konfirmasi, silakan hubungi kami melalui WhatsApp: <strong>${noWhatsapp}</strong>.
+        </p>
+
+        <div class="text-center">
+          <a href="${waLink}" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full transition">
+            💬 Hubungi Sekarang
+          </a>
+        </div>
+
+        <p class="text-xs text-gray-400 text-center mt-6">Terima kasih atas perhatian dan kerja samanya 🙏</p>
+      </div>
+    `;
+  </script>
+
+</body>
+</html>
